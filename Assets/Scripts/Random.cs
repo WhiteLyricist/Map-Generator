@@ -13,18 +13,15 @@ public class Random : MonoBehaviour
     private TMP_InputField _radius;
 
     private static int _radiusInt;
-    public static int Radius 
-    {
-        get => _radiusInt;
-    }
+    public static int Radius => _radiusInt;   
 
     public void Seed()
     {
-        if (_seed.text == "") 
+        if(string.IsNullOrEmpty(_seed.text)) 
         {
             _seed.text = "0";
         }
-        if (_radius.text == "")
+        if (string.IsNullOrEmpty(_radius.text))
         {
             _radiusInt = 2;
             _radius.text = "2";
